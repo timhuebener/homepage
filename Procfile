@@ -1,7 +1,7 @@
 # wsgi: dotted.module:entry_point
 # web: node server.js
 # release: make PROD=1
-static: ./index.html
+static: index.html
 # cron: */5 * * * * python batch.py
 # somepyworker: python somescript.py
 # somenodeworker: node somescript.js
