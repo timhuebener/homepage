@@ -1,0 +1,22 @@
+
+/* Styles for the hero image */
+.hero {
+    /* Photo by mnm.all on Unsplash */
+    background: url('https://images.unsplash.com/photo-1560930950-5cc20e80e392?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center;
+    background-size: cover;
+    padding: 4rem 2rem;
+    /* grid styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+  }
+
+
+/* footer */
+footer {
+    background-color: #333;
+    padding: .75rem;
+    color: white;
+    text-align: center;
+    font-size: .75rem;
+  }
