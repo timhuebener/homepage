@@ -1,6 +1,6 @@
-NGINX_SERVER_NAME=timhuebener.ddns.net
-# NGINX_HTTPS_ONLY=1
-# NGINX_STATIC_PATHS=/path:dir,/path2:dir2...
+NGINX_SERVER_NAME=blog.timhuebener.com
+NGINX_HTTPS_ONLY=1
+# NGINX_STATIC_PATHS=/:index.html
 # NGINX_INCLUDE_FILE=nginx.conf
 # PIKU_AUTO_RESTART=1
 # PYTHON_VERSION=3
