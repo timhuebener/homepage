@@ -1,22 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&display=swap');
 
-/* Styles for the hero image */
-.hero {
-    /* Photo by mnm.all on Unsplash */
-    background: url('https://images.unsplash.com/photo-1560930950-5cc20e80e392?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center;
-    background-size: cover;
-    padding: 4rem 2rem;
-    /* grid styles */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    align-items: center;
+:root {
+  --primary-color: rgba(40, 40, 70, 1);
+  --secondary-color: rgba(40,40, 70, 0.7);
+  --background-color: rgb(243, 243, 243);
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Readex Pro', sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Large title and large sub-title */
+h1 {
+  padding: 0 0;
+  margin: 0 0;
+  font-size: var(--large-font);
+  color: var(--primary-color);
+}
+h3 {
+  padding: 0 0;
+  margin: .3rem 0 var(--small-whitespace) 0;
+  font-size: var(--medium-font);
+  color: var(--secondary-color);
+  min-height: var(--small-whitespace);
+}
+/* Medium title and medium sub-title */
+h2 {
+  padding: 0 0;
+  margin: 0 0;
+  font-weight: 200;
+  font-size: var(--medium-font);
+  color: var(--primary-color);
+}
+h4 {
+  padding: 0 0;
+  margin: .3rem 0 var(--small-whitespace) 0;
+  font-size: var(--small-font);
+  color: var(--secondary-color);
+}
+p {
+  font-size: var(--small-font);
+}
+
+/* Navbar */
+
+nav {
+  padding: var(--small-whitespace) 0;
+  margin-top: var(--small-whitespace);
+  margin-bottom: var(--large-whitespace);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+/* Blog */
+
+section {
+  margin-bottom: var(--large-whitespace);
+}
+
+article {
+  border-bottom: 1px solid var(--secondary-color);
+  padding: var(--medium-whitespace);
+  cursor: pointer;
+
+}
+article:hover{
+  border-radius: 30px;
+  background-color: rgb(230, 230, 230);
+}
+
+.post-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--medium-whitespace);
+}
+.post-header-right {
+  display: flex;
+  margin-left: auto;
+}
+
+.post-body {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: var(--medium-whitespace);
+  place-items: center;
+}
+.post-img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Socials */
+
+.horizontal-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12rem;
+  grid-auto-rows: minmax(100px, auto);
+}
+.horizontal-section {
+  display: grid;
+  place-items: center;
+}
+
+.icon {
+  max-height: 10rem;
+}
+
+#github {
+  filter: invert(30%);
+}
+#github:hover {
+  filter: invert(60%);
+}
+
+#twitter {
+  filter: invert(48%) sepia(93%) saturate(1175%) hue-rotate(175deg) brightness(95%) contrast(100%);
+}
+#twitter:hover {
+  filter: invert(70%) sepia(93%) saturate(1175%) hue-rotate(175deg) brightness(95%) contrast(100%);
+}
+
+#linkedin {
+  filter: invert(25%) sepia(98%) saturate(1747%) hue-rotate(179deg) brightness(95%) contrast(106%);
+}
+#linkedin:hover {
+  filter: invert(70%) sepia(93%) saturate(1175%) hue-rotate(175deg) brightness(95%) contrast(100%);
+}
+
+/* Responsive Handling */
+
+@media (min-width: 640px) {
+  :root {
+    --large-font: calc(2 * 4rem);
+    --medium-font: calc(2 * 2rem);
+    --small-font: calc(2 * 1.5rem);
+  
+    --large-whitespace: calc(2 * 4rem);
+    --medium-whitespace: calc(2 * 2rem);
+    --small-whitespace: calc(2 * 1rem);
   }
 
-
-/* footer */
-footer {
-    background-color: #333;
-    padding: .75rem;
-    color: white;
-    text-align: center;
-    font-size: .75rem;
+  body {
+    padding: 0 10%;
   }
+
+  .horizontal-section {
+    gap: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --large-font: calc(1.5 * 4rem);
+    --medium-font: calc(1.5 * 2rem);
+    --small-font: calc(1.5 * 1.5rem);
+  
+    --large-whitespace: calc(1.5 * 4rem);
+    --medium-whitespace: calc(1.5 * 2rem);
+    --small-whitespace: calc(1.5 * 1rem);
+  }
+
+  body {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --large-font: calc(1 * 4rem);
+    --medium-font: calc(1 * 2rem);
+    --small-font: calc(1 * 1.5rem);
+  
+    --large-whitespace: calc(1 * 4rem);
+    --medium-whitespace: calc(1 * 2rem);
+    --small-whitespace: calc(1 * 1rem);
+  }
+
+  body {
+    padding: 0 15%;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    padding: 0 25%
+  }
+}
+
+@media (min-width: 1536px) {
+  body {
+    padding: 0 25%
+  }
+}
