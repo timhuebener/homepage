@@ -75,7 +75,7 @@ fetch("https://blogback.timhuebener.com/posts")
     })
     .catch(() => {
         const postsArea = document.getElementById("posts")
-        postsArea.innerHTML = "Something went wrong..."
+        postsArea.innerHTML = "No blog posts at the moment..."
 
         const socials = document.getElementById("socials")
         socials.style.visibility = "visible"
