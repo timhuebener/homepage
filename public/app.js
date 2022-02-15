@@ -6,7 +6,7 @@ function getPostElement(post) {
     const leftHeader = document.createElement("div")
     leftHeader.setAttribute("class", "post-header-left")
 
-    const title = document.createElement("h3")
+    const title = document.createElement("h2")
     title.innerHTML = post.title
     leftHeader.appendChild(title)
     
@@ -30,17 +30,22 @@ function getPostElement(post) {
     const body = document.createElement("div")
     body.setAttribute("class", "post-body")
 
+    // if (post.thumbnailUrl?.length > 0) {
+    //     const thumbnail = document.createElement("img")
+    //     thumbnail.setAttribute("class", "post-img")
+    //     thumbnail.setAttribute("src", post.thumbnailUrl)
+    //     thumbnail.setAttribute("alt", post.thumbnailDescription)
+    //     body.appendChild(thumbnail)
+    // }
+
     const abstract = document.createElement("p")
     abstract.innerHTML = post.abstract
-    header.appendChild(abstract)
+    body.appendChild(abstract)
 
-    if (post.thumbnailUrl?.length > 0) {
-        const thumbnail = document.createElement("img")
-        thumbnail.setAttribute("class", "post-img")
-        thumbnail.setAttribute("src", post.thumbnailUrl)
-        thumbnail.setAttribute("alt", post.thumbnailDescription)
-        header.appendChild(thumbnail)
-    }
+    const readMore = document.createElement("p")
+    readMore.style.fontWeight = 800
+    readMore.innerHTML = "read more"
+    body.appendChild(readMore)
 
     // Article
 
@@ -58,13 +63,20 @@ function getPostElement(post) {
 fetch("https://blogback.timhuebener.com/posts")
     .then(res => res.json())
     .then(posts => {
-        console.log(posts);
-
         const postsArea = document.getElementById("posts")
 
         posts.forEach(postData => {
             const post = getPostElement(postData)
-
             postsArea.appendChild(post)
         });
+
+        const socials = document.getElementById("socials")
+        socials.style.visibility = "visible"
+    })
+    .catch(() => {
+        const postsArea = document.getElementById("posts")
+        postsArea.innerHTML = "Something went wrong..."
+
+        const socials = document.getElementById("socials")
+        socials.style.visibility = "visible"
     })
