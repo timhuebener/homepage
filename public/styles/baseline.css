@@ -113,3 +113,11 @@ img {
     height: 100%;
     width: 100%;
 }
+
+/* Navbar */
+
+nav {
+  padding: var(--small-whitespace) 0;
+  margin-top: var(--small-whitespace);
+  margin-bottom: var(--large-whitespace);
+}
