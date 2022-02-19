@@ -60,7 +60,14 @@ function getPostElement(post) {
     return link
 }
 
-fetch("https://blogback.timhuebener.com/posts")
+fetch("https://blogback.timhuebener.com/posts", 
+{
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ take: 5 })
+})
     .then(res => res.json())
     .then(posts => {
         const postsArea = document.getElementById("posts")
