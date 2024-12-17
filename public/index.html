@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Home | timhuebener</title>
-    <!-- <link rel="stylesheet" href="./styles/baseline.css">
+    <title>timhuebener</title>
+    <link rel="stylesheet" href="./styles/baseline.css">
     <link rel="stylesheet" href="./styles/responsive.css">
-    <link rel="stylesheet" href="./styles/styles.css"> -->
-    <link rel="stylesheet" href="./styles/minified.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+<!--    <link rel="stylesheet" href="./styles/minified.css">-->
 
     <meta name="viewport" content="width=320, initial-scale=1">
     <meta name="description" content="The personal homepage of Tim Hübener.">
@@ -19,30 +19,21 @@
     <!-- <meta property="og:image" content="LINK TO THE IMAGE FILE" /> -->
     <meta property="og:url" content="timhuebener.com" />
     <meta property="og:site_name" content="timhuebener.com" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:title" content="Home | timhuebener">
-    <meta name="twitter:description" content="The personal homepage of Tim Hübener.">
-    <!-- <meta name="twitter:image" content="LINK TO IMAGE"> -->
-    <meta name="twitter:site" content="@timhuebener">
-    <meta name="twitter:creator" content="@timhuebener">
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav>
+    <nav id="my-navbar">
         <a href="https://timhuebener.com">
-            <h1 style="margin-bottom: 0;">timhuebener</h1>
-            <h3>Developer. Maker. Creator.</h3>
+            <h1>timhuebener</h1>
         </a>
     </nav>
 
     <main>
-
         <!-- Blog Posts -->
         <section>
-            <h1><a href="https://blog.timhuebener.com">Blog Posts</a></h1>
+            <h1><a href="https://timhuebener.com/blog">Blog Posts</a></h1>
 
             <div id="posts"></div>
         </section>
@@ -56,9 +47,6 @@
                 <a class="horizontal-section" href="https://github.com/timhuebener">
                     <img id="github" class="icon" src="assets/github-brands.svg" alt="github-logo">
                 </a>
-                <a class="horizontal-section" href="https://twitter.com/timhuebener">
-                    <img id="twitter" class="icon" src="assets/twitter-brands.svg" alt="twitter-logo">
-                </a>
                 <a class="horizontal-section" href="https://linkedin.com/in/timhuebener">
                     <img id="linkedin" class="icon" src="assets/linkedin-brands.svg" alt="linkedin-logo">
                 </a>
@@ -68,6 +56,6 @@
 
 </body>
 
-<script src="app.js"></script>
+<script type="module" src="app.js"></script>
 
 </html>
