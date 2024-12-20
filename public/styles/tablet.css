@@ -1,0 +1,12 @@
+@media (min-width: 740px) {
+    :root {
+        --large-font: calc(1.1 * 2.8rem);
+        --medium-font: calc(1.1 * 1.6rem);
+        --small-font: calc(1.1 * 1.4rem);
+        --body-font: 1.1rem;
+
+        --large-whitespace: calc(1.1 * 2.8rem);
+        --medium-whitespace: calc(1.1 * 1.4rem);
+        --small-whitespace: calc(1.1 * 1rem);
+    }
+}
