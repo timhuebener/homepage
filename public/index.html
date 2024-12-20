@@ -3,59 +3,94 @@
 
 <head>
     <title>timhuebener</title>
-    <link rel="stylesheet" href="./styles/baseline.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-<!--    <link rel="stylesheet" href="./styles/minified.css">-->
+    <link href="./styles/baseline.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
+    <link href="./styles/mobile.css" rel="stylesheet">
+    <link href="./styles/tablet.css" rel="stylesheet">
+    <link href="./styles/desktop.css" rel="stylesheet">
 
-    <meta name="viewport" content="width=320, initial-scale=1">
-    <meta name="description" content="The personal homepage of Tim Hübener.">
-    <meta name=”robots” content="follow, index">
+    <meta charset="utf-8"/>
+    <meta content="width=375, initial-scale=1" name="viewport">
+    <meta content="The personal homepage of Tim Hübener." name="description">
+    <meta content="follow, index" name=”robots”>
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Home | timhuebener" />
-    <meta property="og:description" content="The personal homepage of Tim Hübener." />
-    <!-- <meta property="og:image" content="LINK TO THE IMAGE FILE" /> -->
-    <meta property="og:url" content="timhuebener.com" />
-    <meta property="og:site_name" content="timhuebener.com" />
+    <meta content="website" property="og:type"/>
+    <meta content="Home | timhuebener" property="og:title"/>
+    <meta content="The personal homepage of Tim Hübener." property="og:description"/>
+    <meta content="timhuebener.com" property="og:url"/>
+    <meta content="timhuebener.com" property="og:site_name"/>
 </head>
 
 <body>
+<!-- Navbar -->
+<nav>
+    <a href="https://timhuebener.com">
+        <h1>timhuebener</h1>
+    </a>
+</nav>
 
-    <!-- Navbar -->
-    <nav id="my-navbar">
-        <a href="https://timhuebener.com">
-            <h1>timhuebener</h1>
+<main>
+    <!-- Blog Posts -->
+    <section>
+        <h2>Blog Posts</h2>
+        <ul>
+            <!--                <li>-->
+            <!--                    <a class="post" href="blog/opentelemetry.html">-->
+            <!--                        <h5>Local OpenTelemetry</h5>-->
+            <!--                        <h6>18. December 2024</h6>-->
+            <!--                        <p>This is a small excerpt from the post</p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a class="post" href="blog/iosshortcuts.html">-->
+            <!--                        <h5>iOS Shortcuts</h5>-->
+            <!--                        <h6>18. December 2024</h6>-->
+            <!--                        <p>This is a small excerpt from the post</p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a class="post" href="blog/hetzner.html">-->
+            <!--                        <h5>Setting up a Hetzner Server</h5>-->
+            <!--                        <h6>18. December 2024</h6>-->
+            <!--                        <p>This is a small excerpt from the post</p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <li>
+                <a class="post" href="blog/blogrational.html">
+                    <h5>Setting up my homepage</h5>
+                    <h6>18. December 2024</h6>
+                    <p>Why I set up this website the way I did.</p>
+                </a>
+            </li>
+            <li>
+                <a class="post" href="blog/init.html">
+                    <h5>Initial post</h5>
+                    <h6>17. December 2024</h6>
+                    <p>My hello world post for testing.</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Socials -->
+
+</main>
+
+<footer>
+    <section id="copyright">
+        <span>Tim Huebener © 2022 - Present</span>
+        <a class="icon" href="https://github.com/timhuebener">
+            <img alt="github-logo" id="github" src="assets/github-brands.svg">
         </a>
-    </nav>
-
-    <main>
-        <!-- Blog Posts -->
-        <section>
-            <h1><a href="blog/init.html">Blog Posts</a></h1>
-
-            <div id="posts"></div>
-        </section>
-
-        <!-- Socials -->
-        <section id="socials" style="visibility: hidden;">
-            <h1>My Socials</h1>
-            <br>
-
-            <div class="horizontal-sections">
-                <a class="horizontal-section" href="https://github.com/timhuebener">
-                    <img id="github" class="icon" src="assets/github-brands.svg" alt="github-logo">
-                </a>
-                <a class="horizontal-section" href="https://linkedin.com/in/timhuebener">
-                    <img id="linkedin" class="icon" src="assets/linkedin-brands.svg" alt="linkedin-logo">
-                </a>
-            </div>
-        </section>
-    </main>
+        <a class="icon" href="https://linkedin.com/in/timhuebener">
+            <img alt="linkedin-logo" id="linkedin" src="assets/linkedin-brands.svg">
+        </a>
+    </section>
+</footer>
 
 </body>
 
-<script type="module" src="app.js"></script>
+<!--<script type="module" src="app.js"></script>-->
 
 </html>
