@@ -1,0 +1,285 @@
+/*
+  taken from https://www.joshwcomeau.com/css/custom-css-reset/
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+    font-family: "Readex Pro", sans-serif;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    color-scheme: light dark;
+    --hue-gray: 240;
+    --sat-gray: 3%;
+
+    --light-black: hsl(var(--hue-gray), var(--sat-gray), 10%);
+    --light-dark-gray: hsl(var(--hue-gray), var(--sat-gray), 30%);
+    --light-darker-gray: hsl(var(--hue-gray), var(--sat-gray), 50%);
+    --light-gray: hsl(var(--hue-gray), var(--sat-gray), 80%);
+    --light-lighter-gray: hsl(var(--hue-gray), var(--sat-gray), 90%);
+    --light-light-gray: hsl(var(--hue-gray), var(--sat-gray), 97%);
+    --light-white: hsl(var(--hue-gray), var(--sat-gray), 100%);
+
+    --dark-dark-gray: rgb(250, 250, 250);
+    --dark-darker-gray: rgba(210, 210, 210);
+    --dark-gray: rgb(25, 25, 30);
+    --dark-lighter-gray: rgb(35, 35, 40);
+    --dark-light-gray: rgb(20, 20, 25);
+}
+
+body {
+    background-color: light-dark(var(--light-light-gray), var(--dark-gray));
+}
+
+/* Large title and large sub-title */
+h1 {
+    font-size: var(--large-font);
+    color: light-dark(var(--light-dark-gray), var(--dark-dark-gray));
+    font-weight: 200;
+}
+
+h3 {
+    font-size: var(--medium-font);
+    color: light-dark(var(--light-darker-gray), var(--dark-darker-gray));
+    font-weight: 200;
+}
+
+/* Medium title and medium sub-title */
+h2 {
+    font-size: var(--medium-font);
+    color: light-dark(var(--light-dark-gray), var(--dark-dark-gray));
+}
+
+h4 {
+    font-size: var(--small-font);
+    color: light-dark(var(--light-darker-gray), var(--dark-darker-gray));
+    font-weight: 200;
+}
+
+/* Small title and medium sub-title */
+h5 {
+    font-size: var(--small-font);
+    color: light-dark(var(--light-dark-gray), var(--dark-dark-gray));
+}
+
+h6 {
+    font-size: var(--body-font);
+    color: light-dark(var(--light-darker-gray), var(--dark-darker-gray));
+}
+
+p {
+    margin: 1rem 0;
+    font-size: var(--body-font);
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: light-dark(var(--light-darker-gray), var(--dark-darker-gray));
+}
+
+a {
+    color: light-dark(var(--light-dark-gray), var(--dark-dark-gray));
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+@media (min-width: 960px) {
+    :root {
+        --large-font: calc(1.2 * 2.8rem);
+        --medium-font: calc(1.2 * 1.6rem);
+        --small-font: calc(1.2 * 1.4rem);
+        --body-font: 1.2rem;
+
+        --large-whitespace: calc(1.2 * 2.8rem);
+        --medium-whitespace: calc(1.2 * 1.4rem);
+        --small-whitespace: calc(1.2 * 1rem);
+    }
+
+    main {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #page-control{
+        visibility: hidden;
+    }
+}
+@media (min-width: 740px) {
+    :root {
+        --large-font: calc(1.1 * 2.8rem);
+        --medium-font: calc(1.1 * 1.6rem);
+        --small-font: calc(1.1 * 1.4rem);
+        --body-font: 1.1rem;
+
+        --large-whitespace: calc(1.1 * 2.8rem);
+        --medium-whitespace: calc(1.1 * 1.4rem);
+        --small-whitespace: calc(1.1 * 1rem);
+    }
+}
+@media (min-width: 320px) {
+    :root {
+        --large-font: calc(1 * 2.8rem);
+        --medium-font: calc(1 * 1.6rem);
+        --small-font: calc(1 * 1.4rem);
+        --body-font: 1rem;
+
+        --large-whitespace: calc(1 * 2.8rem);
+        --medium-whitespace: calc(1 * 1.4rem);
+        --small-whitespace: calc(1 * 1rem);
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+        padding: var(--small-whitespace);
+        margin-top: var(--small-whitespace);
+        margin-bottom: var(--small-whitespace);
+    }
+
+    /* Main */
+    main {
+        padding: var(--small-whitespace);
+        min-height: calc(100% - (4 * var(--large-font)));
+
+        section {
+            margin-bottom: var(--large-whitespace);
+        }
+
+        ul {
+            padding: var(--small-whitespace);
+
+            li {
+                border-left-style: solid;
+                padding-left: var(--small-whitespace);
+                margin-bottom: var(--medium-whitespace);
+            }
+
+            li:hover {
+                background-color: light-dark(var(--light-lighter-gray), var(--dark-lighter-gray));
+            }
+        }
+    }
+
+    #page-control {
+        width: 100%;
+        border-color: light-dark(var(--light-lighter-gray), var(--dark-lighter-gray));
+        border-radius: 8px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--small-whitespace);
+        grid-auto-rows: minmax(calc(3 * var(--medium-font)), auto);
+
+        button {
+            width: 100%;
+            min-height: var(--large-font);
+            border-style: none;
+            border-radius: 8px;
+            background-color: light-dark(var(--light-lighter-gray), var(--dark-lighter-gray));
+        }
+
+        button:hover {
+            background-color: light-dark(var(--light-gray), var(--dark-gray));
+            cursor: pointer;
+        }
+    }
+
+    /* Footer */
+    footer {
+        width: 100%;
+        height: var(--large-font);
+        padding: var(--small-whitespace);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        div {
+            height: 100%;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            a {
+                margin-left: var(--small-whitespace);
+            }
+        }
+
+        .icon {
+            min-height: var(--medium-font);
+            max-height: calc(var(--large-font));
+        }
+
+        #github {
+            filter: invert(30%) saturate(0%);
+        }
+
+        #linkedin {
+            filter: invert(30%) saturate(0%);
+        }
+    }
+}
