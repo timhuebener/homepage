@@ -45,30 +45,6 @@
         }
     }
 
-    #page-control {
-        width: 100%;
-        border-color: light-dark(var(--light-lighter-gray), var(--dark-lighter-gray));
-        border-radius: 8px;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--small-whitespace);
-        grid-auto-rows: minmax(calc(3 * var(--medium-font)), auto);
-
-        button {
-            width: 100%;
-            min-height: var(--large-font);
-            border-style: none;
-            border-radius: 8px;
-            background-color: light-dark(var(--light-lighter-gray), var(--dark-lighter-gray));
-        }
-
-        button:hover {
-            background-color: light-dark(var(--light-gray), var(--dark-gray));
-            cursor: pointer;
-        }
-    }
-
     /* Footer */
     footer {
         width: 100%;
@@ -81,7 +57,6 @@
 
         div {
             height: 100%;
-            white-space: nowrap;
             display: flex;
             flex-direction: row;
             justify-content: center;
