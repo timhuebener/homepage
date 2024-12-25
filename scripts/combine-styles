@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Get project root directory (parent of scripts directory)
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Find styles directory from project root
+styles_dir=$(find "$PROJECT_ROOT" -type d -name "styles" -print -quit)
+
+if [ -z "$styles_dir" ]; then
+    echo "Error: styles directory not found"
+    exit 1
+fi
+
+output_file="$styles_dir/combined.css"
+# Remove existing combined file
+rm "$output_file"
+
+# Create combined file
+find "$styles_dir" -type f -name "*.css" ! -name "combined.css" -exec cat {} + > "$output_file"
+
+if [ $? -eq 0 ]; then
+    echo "Successfully combined styles into $output_file"
+else
+    echo "Error combining files"
+    exit 1
+fi
