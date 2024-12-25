@@ -1,9 +1,9 @@
 @media (min-width: 320px) {
     :root {
-        --large-font: calc(1 * 2.8rem);
-        --medium-font: calc(1 * 1.6rem);
-        --small-font: calc(1 * 1.4rem);
-        --body-font: 1rem;
+        --large-font: 3.6rem;
+        --medium-font: 2.8rem;
+        --small-font: 1.4rem;
+        --body-font: 1.8rem;
 
         --large-whitespace: calc(1 * 2.8rem);
         --medium-whitespace: calc(1 * 1.4rem);
@@ -12,6 +12,10 @@
 
     html, body {
         overflow-x: hidden;
+    }
+
+    p {
+        line-height: 1.5;
     }
 
     /* Navbar */
@@ -48,12 +52,12 @@
     /* Footer */
     footer {
         width: 100%;
-        height: var(--large-font);
         padding: var(--small-whitespace);
 
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
 
         div {
             height: 100%;
